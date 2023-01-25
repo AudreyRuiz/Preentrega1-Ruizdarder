@@ -64,21 +64,21 @@ while (seleccion != "NO") {
     }
     let unidades = parseInt(prompt("Cuantas pares quiere llevar"))
 
-    carrito.push({producto, unidades, precio})
+    carrito.push({ producto, unidades, precio })
     console.log(carrito)
-  } else{
+  } else {
     alert("Por el momento no contamos con ese producto")
   }
 
   seleccion = prompt("Desea agregar algun producto mas?")
 
-  while(seleccion == "NO"){
+  while (seleccion == "NO") {
     alert("Gracias por la compra")
-    carrito.forEach((carritoFinal)=>{
+    carrito.forEach((carritoFinal) => {
       console.log(`producto:${carritoFinal.producto},unidades: ${carritoFinal.unidades},total a pagar por producto ${carritoFinal.unidades * carritoFinal.precio}`)
     })
     break;
   }
 }
-const total = carrito.reduce((acc,el) => acc + el.precio * el.unidades, 0)
+const total = carrito.reduce((acc, el) => acc + el.precio * el.unidades, 0)
 console.log("El total a pagar por su compra es: " + "$" + total + "Dls")
