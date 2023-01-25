@@ -1,84 +1,67 @@
-const sneakers = [
-  { nombre: "Jordan 1", precio: 150, tallas: "22-30" },
-  { nombre: "Jordan 11", precio: 200, tallas: "25-30" },
-  { nombre: "Adidas foam", precio: 120, tallas: "17-26" },
-  { nombre: "Yezzy", precio: 250, tallas: "20-25" },
-  { nombre: "Sb Dunk", precio: 145, tallas: "18-27" },
-];
+const tiendaContent = document.getElementById("tiendaContent");
+const mirarCarrito = document.getElementById("mirarCarrito");
+const ventanaContainer = document.getElementById("ventanaContainer");
 let carrito = [];
 
-let seleccion = prompt(
-  "Hola, bienvenido desea comprar alguno de nuestros productos? SI/NO"
-);
-while (seleccion != "SI" && seleccion != "NO") {
-  alert("Solo aceptamos SI/NO");
-  seleccion = prompt("Hola desea comprar alguno de nuestros productos? SI/NO");
-}
+productos.forEach((product) => {
+  let content = document.createElement("div");
+  content.className = "card";
+  content.innerHTML = `
+    <img src="${product.img}">
+    <h3>${product.nombre}</h3>
+    <p class="price">${product.precio}$</p>
+    `;
 
-if (seleccion == "SI") {
-  alert("Acontinuacion nuestra lista de productos");
-  let todoslosProductos = sneakers.map(
-    (producto) =>
-      producto.nombre +
-      "  " +
-      "Tallas disponibles: " +
-      producto.tallas +
-      " " +
-      "$" +
-      producto.precio
-  );
-  alert(todoslosProductos.join(" ----- "));
-} else if (seleccion == "NO") {
-  alert("Gracias por venir, vuelva pronto.!!");
-}
+  tiendaContent.append(content);
 
-while (seleccion != "NO") {
-  let producto = prompt("Agregaun producto a tu carrito");
-  let precio = 0;
+  let comprar = document.createElement("button")
+  comprar.innerText = "comprar"
+  comprar.className = "comprar"
+  content.append(comprar);
 
-  if (
-    producto == "Jordan 1" ||
-    producto == "Jordan 11" ||
-    producto == "Adidas foam" ||
-    producto == "Yezzy" ||
-    producto == "Sb Dunk"
-  ) {
-    switch (producto) {
-      case "Jordan 1":
-        precio = 150;
-        break;
-      case "Jordan 11":
-        precio = 200;
-        break;
-      case "Adidas foam":
-        precio = 120;
-        break;
-      case "Yezzy":
-        precio = 250;
-        break;
-      case "Sb Dunk":
-        precio = 145;
-        break;
-      default:
-        break;
-    }
-    let unidades = parseInt(prompt("Cuantas pares quiere llevar"))
-
-    carrito.push({ producto, unidades, precio })
-    console.log(carrito)
-  } else {
-    alert("Por el momento no contamos con ese producto")
-  }
-
-  seleccion = prompt("Desea agregar algun producto mas?")
-
-  while (seleccion == "NO") {
-    alert("Gracias por la compra")
-    carrito.forEach((carritoFinal) => {
-      console.log(`producto:${carritoFinal.producto},unidades: ${carritoFinal.unidades},total a pagar por producto ${carritoFinal.unidades * carritoFinal.precio}`)
+  comprar.addEventListener("click", () => {
+    carrito.push({
+      id: product.id,
+      img: product.img,
+      nombre: product.nombre,
+      precio: product.precio,
     })
-    break;
-  }
-}
-const total = carrito.reduce((acc, el) => acc + el.precio * el.unidades, 0)
-console.log("El total a pagar por su compra es: " + "$" + total + "Dls")
+    console.log(carrito);
+  })
+});
+
+mirarCarrito.addEventListener("click", () => {
+  console.log("Hola funciona");
+
+  const ventanaHeader = document.createElement("div");
+  ventanaHeader.className = "ventana-header"
+  ventanaHeader.innerHTML = `
+  <h1 class="ventana-header-title">Carrito.</h1>
+  `;
+  ventanaContainer.append(ventanaHeader);
+
+  const ventanabutton = document.createElement("h1");
+  ventanabutton.innerText = "❌";
+  ventanabutton.className = "ventana-header-button";
+
+  ventanaHeader.append(ventanabutton);
+
+  carrito.forEach((product) => {
+    let carritoContent = document.createElement("div");
+    carritoContent.className = "ventana-content"
+    carritoContent.innerHTML =`
+    <img src="${product.img}">
+    <h2>${product.nombre}</h2>
+    <p>${product.precio} $</p>
+    `;
+
+    ventanaContainer.append(carritoContent)
+  });
+
+  const total = carrito.reduce((acc, el) => acc + el.precio, 0);
+
+  const totalCompra = document.createElement("div")
+  totalCompra.className= "total-content"
+  totalCompra.innerHTML=`El total a pagar es: ${total} $dls`;
+  ventanaContainer.append(totalCompra);
+});
