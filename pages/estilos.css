@@ -107,3 +107,62 @@ body {
 .card button:hover{
     opacity: 0.7;
 }
+
+.ventana-container{
+    width: 80%;
+    margin: 0 10%;
+    max-height: 88vh;
+    color: #fff;
+    background-color: #101820;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: fixed;
+    overflow: auto;
+    z-index: 101;
+    top: 12vh;
+    scrollbar-color: none;
+}
+
+.ventana-container::-webkit-scrollbar{
+    display: none;
+}
+
+.ventana-header{
+    display: flex;
+    justify-content: space-around;
+    background-color: #e10600;
+    color: #fff;
+    width: 100%;
+}
+
+.ventana-header-title{
+    justify-self: start;
+}
+
+.ventana-header-button{
+    cursor: pointer;
+}
+
+.ventana-container > .ventana-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 10px;
+}
+
+.ventana-container >div > img{
+    height: 120px;
+    width: 120px;
+}
+
+.total-content{
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
