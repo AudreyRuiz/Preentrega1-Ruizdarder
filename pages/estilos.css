@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color:#fff;
+    background-color: #fff;
     margin: 0px;
 }
 
@@ -64,7 +64,7 @@ body {
     font-size: 27px;
 }
 
-.tienda-content{
+.tienda-content {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -73,47 +73,48 @@ body {
     margin-right: 80px;
 }
 
-.card{
+.card {
     padding-top: 38px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     margin: auto;
     text-align: center;
     margin-top: 20px;
 }
 
-.card > img{
+.card>img {
     width: 90%;
     height: 250px;
 }
 
-.price{
+.price {
     color: #e10600;
     font-size: 24px;
 }
 
-.card button{
+.card button {
     border: none;
     outline: 0;
     padding: 12px;
-    color:#fff;
-    background-color:#101820;
+    color: #fff;
+    background-color: #101820;
     text-align: center;
     cursor: pointer;
     width: 100%;
     font-size: 20px;
 }
 
-.card button:hover{
+.card button:hover {
     opacity: 0.7;
 }
 
-.ventana-container{
+.ventana-container {
+    border-radius: 15px;
     width: 80%;
     margin: 0 10%;
     max-height: 88vh;
-    color: #fff;
-    background-color: #101820;
+    color: #101820;
+    background-color:whitesmoke;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,15 +122,15 @@ body {
     position: fixed;
     overflow: auto;
     z-index: 101;
-    top: 12vh;
+    top: 13vh;
     scrollbar-color: none;
 }
 
-.ventana-container::-webkit-scrollbar{
+.ventana-container::-webkit-scrollbar {
     display: none;
 }
 
-.ventana-header{
+.ventana-header {
     display: flex;
     justify-content: space-around;
     background-color: #e10600;
@@ -137,15 +138,15 @@ body {
     width: 100%;
 }
 
-.ventana-header-title{
+.ventana-header-title {
     justify-self: start;
 }
 
-.ventana-header-button{
+.ventana-header-button {
     cursor: pointer;
 }
 
-.ventana-container > .ventana-content{
+.ventana-container>.ventana-content {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -154,15 +155,38 @@ body {
     margin: 10px;
 }
 
-.ventana-container >div > img{
+.ventana-container>div>img {
     height: 120px;
     width: 120px;
 }
 
-.total-content{
+.total-content {
     font-size: 25px;
     padding: 20px;
     text-align: center;
     padding-top: 20px;
 }
 
+.eliminar-producto{
+    cursor: pointer;
+}
+
+.cantidad-carrito{
+    background-color:#101820;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 4px;
+    top: 37px;
+    right: 14px;
+    position: absolute;
+    display: none;
+}
+
+.sumar{
+    cursor: pointer;
+}
+
+.restar{
+    cursor: pointer;
+}

@@ -1,7 +1,8 @@
 const tiendaContent = document.getElementById("tiendaContent");
 const mirarCarrito = document.getElementById("mirarCarrito");
 const ventanaContainer = document.getElementById("ventanaContainer");
-let carrito = [];
+const cantidadCarrito = document.getElementById("cantidadCarrito");
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 productos.forEach((product) => {
   let content = document.createElement("div");
@@ -20,48 +21,35 @@ productos.forEach((product) => {
   content.append(comprar);
 
   comprar.addEventListener("click", () => {
+
+    const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id);
+    if (repeat) {
+      carrito.map((prod) => {
+        if (prod.id === product.id) {
+          prod.cantidad++;
+        }
+      });
+    } else {
     carrito.push({
       id: product.id,
       img: product.img,
       nombre: product.nombre,
       precio: product.precio,
-    })
+      cantidad: product.cantidad,
+    });
+  }
     console.log(carrito);
+    carritoCounter();
+    saveLocal();
   })
 });
 
-mirarCarrito.addEventListener("click", () => {
-  console.log("Hola funciona");
+//Set item
+const saveLocal = () => {
+localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+//Get item
 
-  const ventanaHeader = document.createElement("div");
-  ventanaHeader.className = "ventana-header"
-  ventanaHeader.innerHTML = `
-  <h1 class="ventana-header-title">Carrito.</h1>
-  `;
-  ventanaContainer.append(ventanaHeader);
 
-  const ventanabutton = document.createElement("h1");
-  ventanabutton.innerText = "❌";
-  ventanabutton.className = "ventana-header-button";
 
-  ventanaHeader.append(ventanabutton);
 
-  carrito.forEach((product) => {
-    let carritoContent = document.createElement("div");
-    carritoContent.className = "ventana-content"
-    carritoContent.innerHTML =`
-    <img src="${product.img}">
-    <h2>${product.nombre}</h2>
-    <p>${product.precio} $</p>
-    `;
-
-    ventanaContainer.append(carritoContent)
-  });
-
-  const total = carrito.reduce((acc, el) => acc + el.precio, 0);
-
-  const totalCompra = document.createElement("div")
-  totalCompra.className= "total-content"
-  totalCompra.innerHTML=`El total a pagar es: ${total} $dls`;
-  ventanaContainer.append(totalCompra);
-});
