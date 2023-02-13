@@ -29,14 +29,15 @@ const pintarCarrito = () => {
         <span class="restar"> ➖ </span>
         <p>Cantidad: ${product.cantidad} </p>
         <span class="sumar"> ➕ </span>
+        <span class="eliminar-producto"> 🗑️ </span>
         `;
 
         ventanaContainer.append(carritoContent)
 
         let restar = carritoContent.querySelector(".restar");
-        restar.addEventListener("click",() =>{
-            if(product.cantidad !== 1) {
-            product.cantidad--;
+        restar.addEventListener("click", () => {
+            if (product.cantidad !== 1) {
+                product.cantidad--;
             }
             pintarCarrito();
             saveLocal();
@@ -44,18 +45,16 @@ const pintarCarrito = () => {
         console.log(carrito.length);
 
         let sumar = carritoContent.querySelector(".sumar");
-        sumar.addEventListener("click",() => {
+        sumar.addEventListener("click", () => {
             product.cantidad++;
             pintarCarrito();
             saveLocal();
-        })
+        });
 
-        let eliminar = document.createElement("span");
-        eliminar.innerText= "🗑️";
-        eliminar.className = "eliminar-producto";
-        carritoContent.append(eliminar);
-
-        eliminar.addEventListener("click", eliminarProducto);
+        let eliminar = carritoContent.querySelector(".eliminar-producto");
+        eliminar.addEventListener("click", () => {
+            eliminarProducto(product.id);
+        });
     });
 
     const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
@@ -68,8 +67,8 @@ const pintarCarrito = () => {
 
 mirarCarrito.addEventListener("click", pintarCarrito);
 
-const eliminarProducto = () => {
-    const foundId = carrito.find((element) => element.id);
+const eliminarProducto = (id) => {
+    const foundId = carrito.find((element) => element.id === id);
 
     carrito = carrito.filter((carritoId) => {
         return carritoId !== foundId;
@@ -83,7 +82,7 @@ const carritoCounter = () => {
 
     const carritoLength = carrito.length;
 
-    localStorage.setItem ("carritoLength", JSON.stringify(carritoLength))
+    localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
 
     cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"))
 };
