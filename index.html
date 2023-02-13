@@ -6,37 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="pages/estilos.css">
-    <title>Mi primer Js</title>
+    <title>Formula 1</title>
+    <meta name="description"
+        content="Ingrese al mundo de la Fórmula 1. Su fuente de referencia para conocer las últimas noticias de F1, videos destacados, resultados de GP, cronometraje en vivo, análisis en profundidad y comentarios de expertos.">
+    <meta name="keywords" content="F1,formula1,deportes,coches,carreras,autos, velocidad">
+    <link rel="icon" href="Img/icon.ico">
 </head>
 
 <body>
     <!-- navBar -->
-    <div class="nav-container">
-        <nav class="navbar">
-            <h1 class="navbar-logo">FORMULA 1</h1>
-            <h1 class="mirar-carrito" id="mirarCarrito">🛒<span id="cantidadCarrito" class="cantidad-carrito"></span></span></h1>
-        </nav>
-    </div>
-
-    <!-- banner -->
-    <div class="banner">
-        <div class="banner-container">
-            <h1>Tienda de merch oficial</h1>
-            <p>Mejores precios no encontraras!</p>
+        <div class="nav-container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="https://frormula1.netlify.app/"><img src="img/f1_logo.svg" alt="logo f1"></a>
+                </div>
+                </a>
+                <h1 class="mirar-carrito" id="mirarCarrito">🛒<span id="cantidadCarrito"
+                        class="cantidad-carrito"></span></span></h1>
+            </nav>
         </div>
-    </div>
-
-    <!-- contenido tienda -->
-    <div id="tiendaContent" class="tienda-content"></div>
 
 
-    <!-- ventana -->
-    <div id="ventanaContainer" class="ventana-container"></div>
+
+        <!-- banner -->
+        <div class="banner">
+            <div class="banner-container">
+                <h1>Tienda de merch oficial</h1>
+                <p>Mejores precios no encontraras!</p>
+            </div>
+        </div>
+
+        <!-- contenido tienda -->
+        <div id="tiendaContent" class="tienda-content"></div>
 
 
-    <script src="javascript/productos.js"></script>
-    <script src="javascript/main.js"></script>
-    <script src="javascript/carrito.js"></script>
+        <!-- ventana -->
+        <div id="ventanaContainer" class="ventana-container"></div>
+
+
+        <script src="javascript/productos.js"></script>
+        <script src="javascript/main.js"></script>
+        <script src="javascript/carrito.js"></script>
 </body>
 
 </html>

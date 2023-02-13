@@ -12,6 +12,13 @@ body {
     margin: 0px;
 }
 
+.logo {
+    width: 140px;
+    margin-left: 20px;
+    margin-top: 3.5vh;
+}
+
+
 .nav-container {
     position: sticky;
     z-index: 100;
@@ -22,7 +29,9 @@ body {
     display: flex;
     justify-content: space-between;
     height: 12vh;
-    background-color: #e10600;
+    background-image: url(../Img/fondoheader.webp);
+    text-decoration: none;
+    background-position: top;
 }
 
 .navbar-logo {
@@ -114,7 +123,7 @@ body {
     margin: 0 10%;
     max-height: 88vh;
     color: #101820;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -167,12 +176,12 @@ body {
     padding-top: 20px;
 }
 
-.eliminar-producto{
+.eliminar-producto {
     cursor: pointer;
 }
 
-.cantidad-carrito{
-    background-color:#101820;
+.cantidad-carrito {
+    background-color: #e10600;
     color: #fff;
     border-radius: 50%;
     font-size: 12px;
@@ -183,10 +192,11 @@ body {
     display: none;
 }
 
-.sumar{
+.sumar {
     cursor: pointer;
 }
 
-.restar{
+.restar {
     cursor: pointer;
 }
+
