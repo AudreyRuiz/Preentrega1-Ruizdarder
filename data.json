@@ -1,0 +1,93 @@
+[
+    {
+        "id": 1,
+        "nombre": "Oracle Red Bull Racing 2022 Team Polo",
+        "precio": 76,
+        "img": "https://images.footballfanatics.com/red-bull/oracle-red-bull-racing-2022-team-polo_ss4_p-13300699+u-2e78bwhasmsuzi5zyiun+v-c201179ba83d4aeea1d46bdc9f96dfb4.jpg?_hv=2&w=340",
+        "cantidad": 1
+    },
+    {
+        "id": 2,
+        "nombre": "Oracle Red Bull Racing 2023 Team Polo",
+        "precio": 89,
+        "img": "https://images.footballfanatics.com/red-bull/oracle-red-bull-racing-2023-team-polo_ss4_p-13334182+u-b0ltd2b4a8klkiofqnxj+v-f5c87e271a10452a97dbd9e1a8031219.jpg?_hv=2&w=340",
+        "cantidad": 1
+    },
+    {
+        "id": 3,
+        "nombre": "Scuderia Ferrari 2022 Team T-Shirt",
+        "precio": 69,
+        "img": "https://images.footballfanatics.com/scuderia-ferrari/scuderia-ferrari-2022-team-t-shirt_ss4_p-13300695+u-1besjngqpnomhhn4j7yo+v-2a08e53145a44eeeb5fd1543ae29ffdc.jpg?_hv=2&w=340",
+        "cantidad": 1
+    },
+    {
+        "id": 4,
+        "nombre": "Aston Martin Cognizant F1 2022 Official Team T-Shirt",
+        "precio": 67,
+        "img": "https://images.footballfanatics.com/aston-martin/aston-martin-cognizant-f1-2022-official-team-t-shirt_ss4_p-12099168+u-3g9ubuakn1wchqjya5ag+v-b4d7309c970a4d04aad5e7de9b9b6335.jpg?_hv=2&w=340",
+        "cantidad": 1
+    },
+    {
+        "id": 5,
+        "nombre": "Scuderia Ferrari 2022 Team Polo",
+        "precio": 86,
+        "img": "https://images.footballfanatics.com/scuderia-ferrari/scuderia-ferrari-2022-team-polo_ss4_p-13300635+u-1aht9v9750yzhrzw8kg3+v-ef82d572e9f04a49995131523e4de5a9.jpg?_hv=2&w=340",
+        "cantidad": 1
+    },
+    {
+        "id": 6,
+        "nombre": "McLaren 2022 Team 1/4 Zip Midlayer",
+        "precio": 80,
+        "img": "https://images.footballfanatics.com/mclaren-f1-team/mclaren-2022-team-1/4-zip-midlayer_ss4_p-13306458+u-128of55vuo4zyen4vnf3+v-ffec269424c345e09e358b095352ae10.jpg?_hv=2&w=340",
+        "cantidad": 1
+    },
+    {
+        "id": 7,
+        "nombre": "Oracle Red Bull Racing 2023 Team Water Resistant Jacket",
+        "precio": 169,
+        "img": "https://images.footballfanatics.com/red-bull/oracle-red-bull-racing-2023-team-water-resistant-jacket_ss4_p-13334222+u-dnk1zfc1r60d6y5s02yh+v-314ccda2493d4de586e2da49d35d6399.jpg?_hv=2&w=340",
+        "cantidad": 1
+    },
+    {
+        "id": 8,
+        "nombre": "Oracle Red Bull Racing 2022 Team Softshell",
+        "precio": 146,
+        "img": "https://images.footballfanatics.com/red-bull/oracle-red-bull-racing-2022-team-softshell_ss4_p-13300665+u-1d2wvrjaxaq4hjsburc6+v-289315132cf849ca980dd12b87eb1ca7.jpg?_hv=2&w=340",
+        "cantidad": 1
+    },
+    {
+        "id": 9,
+        "nombre": "Mercedes AMG Petronas F1 2022 Hamilton Cap - White",
+        "precio": 46,
+        "img": "https://images.footballfanatics.com/mercedes-amg-petronas-f1-team/mercedes-amg-petronas-f1-2022-lewis-hamilton-baseball-cap-white_ss4_p-13300561+u-pusvg0hhmpgrb2jk2plg+v-d6b3f1a3520743beabea954d2efc12f0.jpg?_hv=2&w=340",
+        "cantidad": 1
+    },
+    {
+        "id": 10,
+        "nombre": "McLaren 2022 Team Hooded Sweat - Unisex",
+        "precio": 109,
+        "img": "https://images.footballfanatics.com/mclaren-f1-team/mclaren-2022-team-hooded-sweat-unisex_ss4_p-13306512+u-6jr9s1sod51g2p9icacr+v-2f4e281059ec4e3ebe27da0d13dc4542.jpg?_hv=2&w=340",
+        "cantidad": 1
+    },
+    {
+        "id": 11,
+        "nombre": "Oracle Red Bull Racing 2023 Team Set up T-shirt",
+        "precio": 61,
+        "img": "https://images.footballfanatics.com/red-bull/oracle-red-bull-racing-2023-team-set-up-t-shirt_ss4_p-13334221+u-p4teptrd49jes21wsks2+v-46b752ca3ed34d3fa54ae9a308531785.jpg?_hv=2&w=340",
+        "cantidad": 1
+    },
+    {
+        "id": 12,
+        "nombre": "Scuderia Ferrari 2023 Team Charles Leclerc T-Shirt",
+        "precio": 86,
+        "img": "https://images.footballfanatics.com/scuderia-ferrari/scuderia-ferrari-2023-team-charles-leclerc-t-shirt_ss4_p-13368477+u-1a0txatu76m1w7bkbbaj+v-b38414ba03b0479ebc7e8f9e4116ab11.jpg?_hv=2&w=340",
+        "cantidad": 1
+    },
+    {
+        "id": 13,
+        "nombre": "Scuderia Ferrari 2022 Team Charles Leclerc T-Shirt",
+        "precio": 75,
+        "img": "https://images.footballfanatics.com/scuderia-ferrari/scuderia-ferrari-2022-team-charles-leclerc-t-shirt_ss4_p-13300626+u-cu7zp6f3tjc6yh8v2srz+v-e71a9545e7c24bcdb0f6de8c3c689ab2.jpg?_hv=2&w=340",
+        "cantidad": 1
+    }
+]
